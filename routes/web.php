@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('auth/login');
 });
 
 Route::get('/index', function () {
@@ -49,6 +49,10 @@ Route::get('/pricing', function () {
     return view('pricing');
 });
 Route::get('/add-retailer', function () {
+    
     return view('/worker/add-retailer');
 });
 Route::post('submit','Business@save');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
