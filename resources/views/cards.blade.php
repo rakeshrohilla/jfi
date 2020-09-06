@@ -13,7 +13,7 @@ Author URL: http://w3layouts.com
   <title>Collective Admin Panel Flat a Bootstrap Responsive Website Template | Cards :: W3Layouts</title>
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link rel="stylesheet" href="{{ URL::asset('css/style-starter.css') }}">
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -27,20 +27,20 @@ Author URL: http://w3layouts.com
 
     <!-- logo start -->
     <div class="logo">
-      <h1><a href="index.html">Collective</a></h1>
+      <h1><a href="index">Collective</a></h1>
     </div>
 
   <!-- if logo is image enable this -->
     <!-- image logo --
     <div class="logo">
-      <a href="index.html">
+      <a href="index">
         <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
       </a>
     </div>
     <!-- //image logo -->
 
     <div class="logo-icon text-center">
-      <a href="index.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
+      <a href="index" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
     </div>
     <!-- //logo end -->
 
@@ -48,20 +48,20 @@ Author URL: http://w3layouts.com
 
       <!-- sidebar nav start -->
       <ul class="nav nav-pills nav-stacked custom-nav">
-        <li><a href="index.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+        <li><a href="index"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
         </li>
         <li class="menu-list active">
           <a href="#"><i class="fa fa-cogs"></i>
             <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>
           <ul class="sub-menu-list">
-            <li><a href="carousels.html">Carousels</a> </li>
-            <li><a href="cards.html">Default cards</a> </li>
-            <li><a href="people.html">People cards</a></li>
+            <li><a href="carousels">Carousels</a> </li>
+            <li><a href="cards">Default cards</a> </li>
+            <li><a href="people">People cards</a></li>
           </ul>
         </li>
-        <li><a href="pricing.html"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
-        <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
-        <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
+        <li><a href="pricing"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
+        <li><a href="blocks"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
+        <li><a href="forms"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
       </ul>
       <!-- //sidebar nav end -->
       <!-- toggle button start -->
@@ -80,7 +80,7 @@ Author URL: http://w3layouts.com
     <div class="menu-right">
       <div class="navbar user-panel-top">
         <div class="search-box">
-          <form action="#search-results.html" method="get">
+          <form action="#search-results" method="get">
             <input class="search-input" placeholder="Search Here..." type="search" id="search">
             <button class="search-submit" value=""><span class="fa fa-search"></span></button>
           </form>
@@ -192,7 +192,7 @@ Author URL: http://w3layouts.com
                   <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
                   <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
                   <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
-                  <li class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i> Logout</a> </li>
+                  <li class="logout"> <a href="#sign-up"><i class="fa fa-power-off"></i> Logout</a> </li>
                 </ul>
               </li>
             </ul>
@@ -210,7 +210,7 @@ Author URL: http://w3layouts.com
       <!-- breadcrumbs -->
       <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb my-breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index">Home</a></li>
           <li class="breadcrumb-item"><a href="#">Elements</a></li>
           <li class="breadcrumb-item active" aria-current="page">Cards</li>
         </ol>
@@ -398,22 +398,22 @@ Author URL: http://w3layouts.com
 <!-- /move top -->
 
 
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="{{ URL::asset('js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ URL::asset('js/jquery-1.10.2.min.js') }}"></script>
 
 <!-- chart js -->
-<script src="assets/js/Chart.min.js"></script>
-<script src="assets/js/utils.js"></script>
+<script src="{{ URL::asset('js/chart.min.js') }}"></script>
+<script src="{{ URL::asset('js/utils.js') }}"></script>
 <!-- //chart js -->
 
 <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
-<script src="assets/js/bar.js"></script>
-<script src="assets/js/linechart.js"></script>
+<script src="{{ URL::asset('js/bar.js') }}"></script>
+<script src="{{ URL::asset('js/linechart.js') }}"></script>
 <!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
 
 
-<script src="assets/js/jquery.nicescroll.js"></script>
-<script src="assets/js/scripts.js"></script>
+<script src="{{ URL::asset('js/jquery.nicescroll.js') }}"></script>
+<script src="{{ URL::asset('js/scripts.js') }}"></script>
 
 <!-- close script -->
 <script>
@@ -439,7 +439,7 @@ Author URL: http://w3layouts.com
 <!-- disable body scroll when navbar is in active -->
 
  <!-- loading-gif Js -->
- <script src="assets/js/modernizr.js"></script>
+ <script src="{{ URL::asset('js/modernizr.js') }}"></script>
  <script>
      $(window).load(function () {
          // Animate loader off screen
@@ -449,7 +449,7 @@ Author URL: http://w3layouts.com
  <!--// loading-gif Js -->
 
 <!-- Bootstrap Core JavaScript -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 
 
 </body>

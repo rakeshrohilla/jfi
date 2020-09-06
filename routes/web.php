@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
+Route::get('/worker', function () {
+    return view('worker/dashboard');
+});
+
 Route::get('/blocks', function () {
     return view('blocks');
 });
