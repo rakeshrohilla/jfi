@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('auth/login');
 });
 
 Route::get('/index', function () {
@@ -48,3 +48,6 @@ Route::get('/carousels', function () {
 Route::get('/pricing', function () {
     return view('pricing');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -14,7 +14,7 @@
       </ol>
     </nav>
     <div class="welcome-msg pt-3 pb-4">
-      <h1>Hi <span class="text-primary">John</span>, Welcome back</h1>
+      <h1>Hi <span class="text-primary">{{Auth::user->}}</span>, Welcome back</h1>
       <p><?php
         echo date("l jS \of F Y h:i:s A");
         ?></p>
