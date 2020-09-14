@@ -49,7 +49,6 @@ Route::get('/pricing', function () {
     return view('pricing');
 });
 Route::get('/add-retailer', function () {
-    
     return view('/worker/add-retailer');
 });
 Route::post('submit','Business@save');

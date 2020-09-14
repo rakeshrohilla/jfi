@@ -22,6 +22,14 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::create('business', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('landmark')->nullable();
+            $table->string('busi_img')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
+        });
     }
 
     /**
