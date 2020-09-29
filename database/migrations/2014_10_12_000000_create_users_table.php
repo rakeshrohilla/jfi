@@ -24,10 +24,23 @@ class CreateUsersTable extends Migration
         });
         Schema::create('business', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('busi_name');
+            $table->string('busi_type');
+            $table->string('contact');
+            $table->string('city')->nullable();
+            $table->string('zip')->nullable();
             $table->string('landmark')->nullable();
             $table->string('busi_img')->nullable();
             $table->rememberToken();
+            $table->timestamps();
+        });
+
+        Schema::create('worker', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('address_address')->nullable();
+            $table->double('address_latitude')->nullable();
+            $table->double('address_longitude')->nullable();
             $table->timestamps();
         });
     }

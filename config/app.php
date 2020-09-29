@@ -175,6 +175,15 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Location Service Providers...
+         */
+
+        Stevebauman\Location\LocationServiceProvider::class,
+        Dhamkith\Googlemap\GooglemapServiceProvider::class,
+        GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class,
+
+
     ],
 
     /*
@@ -226,6 +235,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Location' => 'Stevebauman\Location\Facades\Location',
+        'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
+
 
     ],
 

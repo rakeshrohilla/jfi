@@ -1,6 +1,6 @@
 @extends('layouts/workerlayout')
 
-@section('title', 'Add Retailer')
+@section('title', 'Edit Retailer')
 
 @section('content')
             <!-- sucess alert-->
@@ -13,18 +13,19 @@
         <!-- forms 2 -->
     <div class="card card_border py-2 mb-4">
       <div class="card-body">
-          <form action="submit" method="post" enctype="multipart/form-data">
-          @csrf
+          <form action="/update-retailer/{{$shop->id}}" method="post" enctype="multipart/form-data">
+          {{ csrf_field() }}
+          {{method_field('PUT')}}
               <div class="form-row">
                   <div class="form-group col-md-4">
                       <label class="input__label">Business Name</label>
-                      <input type="text" id="fname"name="busi_name" class="form-control input-style"
+                      <input type="text" id="fname"name="busi_name" value="{{$shop->busi_name}}" class="form-control input-style"
                           placeholder="Business Name,Shop name...">
                   </div>
                   <div class="form-group col-md-4">
                   <label class="input__label">Business Type</label>
                   <select class="custom-select input-style" name="busi_type">
-                      <option value="">Select...</option>
+                      <option value="{{$shop->busi_type}}">Select...</option>
                       <option value="72">Accommodation and Food Services</option>
 <option value="56">Administrative and Support and Waste Management and Remediation Services</option>
 <option value="11">Agriculture, Forestry, Fishing and Hunting</option>
@@ -54,20 +55,20 @@
                   </div>
                   <div class="form-group col-md-4">
                       <label  class="input__label">Mobile Number</label>
-                      <input type="text" id="mnumber" name="contact" class="form-control input-style"
+                      <input type="text" id="mnumber" name="contact" value="{{$shop->contact}}" class="form-control input-style"
                           placeholder="Mob Number">
                   </div>
               </div>
 
               <div class="form-group">
                   <label for="inputAddress2" class="input__label">Landmark</label>
-                  <input type="text" class="form-control input-style"name="landmark" id="inputAddress2"
+                  <input type="text" class="form-control input-style"name="landmark" value="{{$shop->landmark}}" id="inputAddress2"
                       placeholder="Apartment, studio, or floor">
               </div>
               <div class="form-row">
                   <div class="form-group col-md-6">
                       <label for="inputCity" class="input__label">City</label>
-                      <input type="text" class="form-control input-style" name="city" id="inputCity">
+                      <input type="text" class="form-control input-style" name="city" value="{{$shop->city}}" id="inputCity">
                   </div>
                   <div class="form-group col-md-4">
                       <label for="inputState" class="input__label">State</label>
@@ -78,7 +79,7 @@
                   </div>
                   <div class="form-group col-md-2">
                       <label for="inputZip" class="input__label">Zip</label>
-                      <input type="text" class="form-control input-style" name="zip" id="inputZip">
+                      <input type="text" class="form-control input-style" name="zip" value="{{$shop->zip}}" id="inputZip">
                   </div>
 
               </div>
@@ -97,7 +98,8 @@
               </div>
 
 
-              <button type="submit" class="btn btn-primary btn-style mt-4" value="submit">Submit</button>
+              <button type="submit" class="btn btn-primary btn-style mt-4" >Update</button>
+              <a herf="/edit" class="btn btn-danger btn-style mt-4">Cancel</a>
           </form>
       </div>
   </div>

@@ -53,5 +53,12 @@ Route::get('/add-retailer', function () {
 });
 Route::post('submit','Business@save');
 Auth::routes();
-
+Route::get('/edit','Business@list');
+Route::get('/data-edit/{id}', 'Business@edit');
+Route::get('/data-delete/{id}', 'Business@delete');
+Route::put('/update-retailer/{id}', 'Business@update');
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+

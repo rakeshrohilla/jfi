@@ -10,6 +10,11 @@
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ URL::asset('css/style-starter.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/mystyle.css') }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -23,41 +28,31 @@
 
     <!-- logo start -->
     <div class="logo">
-      <h1><a href="index">Collective</a></h1>
+      <h1><a href="worker">Collective</a></h1>
     </div>
 
   <!-- if logo is image enable this -->
     <!-- image logo --
     <div class="logo">
-      <a href="index">
+      <a href="worker">
         <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
       </a>
     </div>
     <!-- //image logo -->
 
     <div class="logo-icon text-center">
-      <a href="index" title="logo"><img src="{{ URL::asset('images/logo.png') }}" alt="logo-icon"> </a>
+      <a href="worker" title="logo"><img src="{{ URL::asset('images/logo.png') }}" alt="logo-icon"> </a>
     </div>
     <!-- //logo end -->
 
     <div class="sidebar-menu-inner">
 
       <!-- sidebar nav start -->
+      <!-- sidebar nav start -->
       <ul class="nav nav-pills nav-stacked custom-nav">
-        <li><a href="index"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+        <li><a href="/edit"><i class="fa fa-user"></i><span> Dashboard</span></a>
         </li>
-        <li class="menu-list">
-          <a href="#"><i class="fa fa-cogs"></i>
-            <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>
-          <ul class="sub-menu-list">
-            <li><a href="carousels">Carousels</a> </li>
-            <li><a href="cards">Default cards</a> </li>
-            <li><a href="people">People cards</a></li>
-          </ul>
-        </li>
-        <li><a href="pricing"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
-        <li><a href="blocks"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
-        <li class="active"><a href="forms"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
+
       </ul>
       <!-- //sidebar nav end -->
       <!-- toggle button start -->
@@ -66,6 +61,7 @@
         <i class="fa fa-angle-double-right menu-collapsed__right"></i>
       </a>
       <!-- //toggle button end -->
+
     </div>
   </div>
   <!-- //sidebar menu end -->
@@ -208,7 +204,7 @@
         <!-- breadcrumbs -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-breadcrumb">
-            <li class="breadcrumb-item"><a href="index">Home</a></li>
+            <li class="breadcrumb-item"><a href="worker">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
           </ol>
         </nav>
@@ -313,6 +309,9 @@
  <!--// loading-gif Js -->
 
 <!-- Bootstrap Core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
 <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 
 
