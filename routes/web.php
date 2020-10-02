@@ -12,51 +12,40 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/index', function () {
-    return view('index');
-});
+Route::group(['middleware' => ['auth','admin']], function () {
 
-Route::get('/worker', function () {
-    return view('worker/dashboard');
-});
+    Route::get('/dashboard', function () {
+        return view('admin/dashboard');
+    });
+    Route::get('/retailer', function () {
+        return view('admin/retailer');
+    });
+    Route::get('/employee', function () {
+        return view('admin/employee');
+    });
 
-Route::get('/blocks', function () {
-    return view('blocks');
 });
-
-Route::get('/cards', function () {
-    return view('cards');
-});
-
-Route::get('/people', function () {
-    return view('people');
-});
-
-Route::get('/forms', function () {
-    return view('forms');
-});
-
-Route::get('/carousels', function () {
-    return view('carousels');
-});
-
-Route::get('/pricing', function () {
-    return view('pricing');
-});
-Route::get('/add-retailer', function () {
-    return view('/worker/add-retailer');
-});
-Route::post('submit','Business@save');
-Auth::routes();
-Route::get('/edit','Business@list');
+Route::group(['middleware' => ['auth','worker']], function () {
+    Route::get('/worker', function () {
+        return view('worker/dashboard');
+    });
+    Route::get('/add-retailer', function () {
+        return view('/worker/add-retailer');
+    });
+    Route::post('submit','Business@save');
+    Route::get('/edit','Business@list');
 Route::get('/data-edit/{id}', 'Business@edit');
 Route::get('/data-delete/{id}', 'Business@delete');
 Route::put('/update-retailer/{id}', 'Business@update');
+
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 

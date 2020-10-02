@@ -184,7 +184,8 @@
                   <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
                   <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
                   <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
-                  <li class="logout"> <a href="#sign-up"><i class="fa fa-power-off"></i> Logout</a> </li>
+                  <li class="logout"> <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a> </li>
                 </ul>
               </li>
             </ul>
@@ -195,6 +196,9 @@
     <!--notification menu end -->
   </div>
   <!-- //header-ends -->
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+</form>
 <!-- main content start -->
 <div class="main-content">
 

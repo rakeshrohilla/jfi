@@ -36,7 +36,7 @@
     <!-- //image logo -->
 
     <div class="logo-icon text-center">
-      <a href="index" title="logo"><img src="{{ URL::asset('images/logo.png') }}" alt="logo-icon"> </a>
+      <a href="dashboard" title="logo"><img src="{{ URL::asset('images/logo.png') }}" alt="logo-icon"> </a>
     </div>
     <!-- //logo end -->
 
@@ -44,18 +44,9 @@
 
       <!-- sidebar nav start -->
       <ul class="nav nav-pills nav-stacked custom-nav">
-        <li><a href="index"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+        <li><a href="retailer"><i class="fa fa-tachometer"></i><span>New Retailers</span></a>
         </li>
-        <li class="menu-list">
-          <a href="#"><i class="fa fa-cogs"></i>
-            <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>
-          <ul class="sub-menu-list">
-            <li><a href="carousels">Carousels</a> </li>
-            <li><a href="cards">Default cards</a> </li>
-            <li><a href="people">People cards</a></li>
-          </ul>
-        </li>
-        <li><a href="pricing"><i class="fa fa-table"></i> <span>Pricing tables</span></a></li>
+        <li><a href="employee"><i class="fa fa-table"></i> <span>New Employee</span></a></li>
         <li><a href="blocks"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
         <li class="active"><a href="forms"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
       </ul>
@@ -181,14 +172,15 @@
                 </a>
                 <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
                   <li class="user-info">
-                    <h5 class="user-name">John Deo</h5>
+                    <h5 class="user-name">{{Auth::user()->name}}</h5>
                     <span class="status ml-2">Available</span>
                   </li>
                   <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
                   <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
                   <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
                   <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
-                  <li class="logout"> <a href="#sign-up"><i class="fa fa-power-off"></i> Logout</a> </li>
+                  <li class="logout"> <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a> </li>
                 </ul>
               </li>
             </ul>
@@ -199,6 +191,9 @@
     <!--notification menu end -->
   </div>
   <!-- //header-ends -->
+  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+</form>
 <!-- main content start -->
 <div class="main-content">
 
