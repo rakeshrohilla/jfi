@@ -20,9 +20,13 @@ class WorkerMiddleware
 
             return $next($request);
         }
+        if(Auth::user()->user_type=='admin'){
+
+            return $next($request);
+        }
         else {
 
-            return redirect('/home')->with('status','You are note allowed');
+            return redirect('/home')->with('status','You are not allowed');
 
         }
 

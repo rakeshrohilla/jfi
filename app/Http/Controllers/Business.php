@@ -45,7 +45,17 @@ class Business extends Controller
 
 
       }
+      public function view($id)
+      {
+           // get the shark
+        $shop = Retailer::find($id);
+      // $cont = Storage::get('public/image/fjkk.jpg');
+     //  return response()->file($cont);
 
+        // show the edit form and pass the shark
+       return view('admin/retailer-profile')
+          ->with('shop', $shop);
+      }
 
       public function edit($id)
       {
@@ -53,7 +63,7 @@ class Business extends Controller
         $shop = Retailer::find($id);
 
         // show the edit form and pass the shark
-        return View('worker/retailer-edit')
+        return view('worker/retailer-edit')
             ->with('shop', $shop);
       }
 

@@ -10,7 +10,7 @@
               <div class="col-sm-6 pr-sm-2 statistics-grid">
                 <div class="card card_border border-primary-top p-4">
                   <i class="lnr lnr-users"> </i>
-                  <a href="add-retailer"><h3 class="text-primary number">ADD RETAILER</h3></a>
+                  <a href="create"><h3 class="text-primary number">ADD RETAILER</h3></a>
                   <p class="stat-text">78</p>
                 </div>
               </div>

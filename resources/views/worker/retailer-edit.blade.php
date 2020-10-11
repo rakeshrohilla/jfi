@@ -1,4 +1,12 @@
-@extends('layouts/workerlayout')
+@if(Auth::user()->user_type=='admin')
+   @php $type = "layouts/adminlayout" @endphp
+@elseif(Auth::user()->user_type=='worker')
+    @php $type = "layouts/workerlayout" @endphp
+@else
+    @php return 'home' @endphp
+@endif
+
+@extends($type)
 
 @section('title', 'Edit Retailer')
 

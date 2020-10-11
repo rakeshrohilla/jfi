@@ -22,7 +22,7 @@ class AdminMiddleware
         }
         else {
 
-            return redirect('/home')->with('status','You are note allowed');
+            return redirect('/home')->with('status','You are not allowed');
 
         }
 

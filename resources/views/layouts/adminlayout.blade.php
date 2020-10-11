@@ -10,6 +10,12 @@
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ URL::asset('css/style-starter.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/mystyle.css') }}">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">

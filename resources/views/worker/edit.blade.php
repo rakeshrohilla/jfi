@@ -1,4 +1,12 @@
-@extends('layouts/workerlayout')
+@if(Auth::user()->user_type=='admin')
+   @php $type = "layouts/adminlayout" @endphp
+@elseif(Auth::user()->user_type=='worker')
+    @php $type = "layouts/workerlayout" @endphp
+@else
+    @php return 'home' @endphp
+@endif
+
+@extends($type)
 
 @section('title', 'Add Retailer')
 
@@ -49,7 +57,7 @@
                                         <td>{{$i->contact}}</td>
 
                                         <td>
-                                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                            <a href="/data-view/{{$i->id}}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                                             <a href="/data-edit/{{$i->id}}" class="edit" title="Edit" ><i class="material-icons">&#xE254;</i></a>
                                             <a href="/data-delete/{{$i->id}}" class="delete" title="Delete"><i class="material-icons">&#xE872;</i></a>
                                         </td>

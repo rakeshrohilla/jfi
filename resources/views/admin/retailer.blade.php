@@ -17,8 +17,8 @@
               <div class="col-sm-6 pl-sm-2 statistics-grid">
                 <div class="card card_border border-primary-top p-4">
                   <i class="lnr lnr-eye"> </i>
-                  <h3 class="text-secondary number">CHECK-OUT</h3>
-                  <p class="stat-text">DURATION</p>
+                  <a href="edit"><h3 class="text-secondary number">CHECK-OUT</h3></a>
+                  <p class="stat-text">VIEW/EDIT/UPDATE/DELETE</p>
                 </div>
               </div>
             </div>
