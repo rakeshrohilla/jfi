@@ -42,9 +42,9 @@
           </div>
         </div>
         <div class="col-md-6 mt-md-0 mt-5 cwp23-img">
-          <img src="{{ URL::asset('images/avatar1.jpg') }}" class="img-fluid rounded" alt="">
+          <img src="{{asset('/storage/image/'.$shop->busi_name.'.jpg') }}" class="img-fluid rounded" alt="not foumd">
           <br><br><br>
-          <a href="#read" class="btn btn-style btn-primary mr-2"> Update</a>
+          <a href="/data-edit/{{$shop->id}}" class="btn btn-style btn-primary mr-2"> Update</a>
           <a href="#more" class="btn btn-style border-btn"> Convert To Premium</a>
         </div>
 
