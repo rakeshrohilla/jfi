@@ -34,6 +34,15 @@ Route::group(['middleware' => ['auth','admin']], function () {
     });
     Route::get('/data-view/{id}', 'Business@view');
 
+    Route::get('/add-employees', function () {
+        return view('admin/add-employees');
+    });
+    Route::post('/create','AddWorker@save');
+    Route::get('/list-employees','AddWorker@list');
+    Route::get('/emp-edit/{id}', 'AddWorker@edit');
+Route::get('/emp-delete/{id}', 'AddWorker@delete');
+Route::put('/update-emp/{id}', 'AddWorker@update');
+
 });
 Route::group(['middleware' => ['auth','worker']], function () {
     Route::get('/worker', function () {

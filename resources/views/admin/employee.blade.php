@@ -11,13 +11,13 @@
                 <div class="card card_border border-primary-top p-4">
                   <i class="lnr lnr-users"> </i>
                   <a href="add-employees"><h3 class="text-primary number">ADD EMPLOYEES</h3></a>
-                  <p class="stat-text">78</p>
+                  <p class="stat-text">{{App\User::count()}}</p>
                 </div>
               </div>
               <div class="col-sm-6 pl-sm-2 statistics-grid">
                 <div class="card card_border border-primary-top p-4">
                   <i class="lnr lnr-eye"> </i>
-                  <a href="add-employees"><h3 class="text-primary number">EDIT EMPLOYEES</h3></a>
+                  <a href="list-employees"><h3 class="text-primary number">EDIT EMPLOYEES</h3></a>
                   <p class="stat-text">VIEW/UPDTE/DELETE</p>
                 </div>
               </div>
